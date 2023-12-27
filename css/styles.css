@@ -32,15 +32,71 @@ img {
 	height: 100%;
 }
 
+ul {list-style: none;}
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/**********************************/
+/* Header
+/**********************************/
+.header {
+	padding: 20px 0;
+	background-color: var(--ligth-green);
+}
+
+.header-c {
+	max-width: 1200px;
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 150px;
+}
+
+.navbar ul {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.navbar-list__link {
+	position: relative;
+	color: var(--black);
+	transition: .5s;
+	padding: 2px 5px;
+}
+
+.navbar-list__link:hover {
+	color: var(--dark-green);
+}
+
+.navbar-list__link::before {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	border-radius: 20px;
+	transition: .5s ease-in-out;
+	background-color: var(--dark-green);
+}
+
+.navbar-list__link:hover::before {
+	width: 100%;
+}
 
 /**********************************/
 /* Menu
 /**********************************/
 
-/**********************************/
-/* Header
-/**********************************/
 
 /**********************************/
 /* Quem somos
