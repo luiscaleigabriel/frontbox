@@ -17,7 +17,8 @@
 	--white0: #fff;
 	--white1: #f5f5f5;
 	--black: #000;
-	--red: #fd3534;
+	--red: #ff0000;
+	--dark-red: #fd3534;
 	--ligth-pink: #f3a0fd;
 	--dark-pink: #e10bf9;
 	--ligth-green: #0bf96a;
@@ -27,6 +28,10 @@
 /**********************************/
 /* Estilos gerais
 /**********************************/
+html {
+	scroll-behavior: smooth;
+}
+
 img { 
 	width: 100%;
 	height: 100%;
@@ -39,11 +44,53 @@ a {
 	text-decoration: none;
 }
 
+p {
+	line-height: 20px;
+	font-size: 1rem;
+}
+
+.title-p {
+	text-align: center;
+	margin-top: 90px;
+	margin-bottom: 10px;
+	font-size: 2.4rem;
+}
+
+hr {
+	width: 200px;
+	border-radius: 20px;
+	margin: 20px auto;
+	border: 1.8px solid var(--dark-pink);
+}
+
+.section {
+	max-width: 1200px;
+	width: 900px;
+	margin: 10px auto;
+}
+
+.title {
+	margin: 20px 0;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
 /**********************************/
 /* Header
 /**********************************/
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	padding: 20px 0;
+	z-index: 9;
 	background-color: var(--ligth-green);
 }
 
@@ -58,6 +105,55 @@ a {
 
 .logo {
 	width: 150px;
+}
+
+#toggle {
+	display: none;
+	width: 50px;
+	height: 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid var(--dark-pink);
+	box-shadow: 0 0 10px var(--ligth-pink),
+				0 0 20px var(--ligth-pink);
+}
+
+span.toggle_line {
+	display: block;
+	width: 35px;
+	height: 3px;
+	margin: 3px auto;
+	border-radius: 20px;
+	background-color: var(--dark-pink);
+	transform-origin: center;
+	box-shadow: 0 0 10px var(--ligth-pink);
+	transition: .2s ease-in-out;
+}
+
+button#toggle.action-menu {
+	border-color: var(--red);
+	box-shadow: 0 0 10px var(--red);
+}
+
+button.action-menu .toggle_line:nth-child(1) {
+	transform: translateY(2px) rotate(45deg);
+	background-color: var(--red);
+	box-shadow: 0 0 10px var(--red);
+}
+
+button.action-menu .toggle_line:nth-child(2) {
+	display: none;
+}
+
+button.action-menu .toggle_line:nth-child(3) {
+	transform: translateY(-4px) rotate(-45deg);
+	background-color: var(--red);
+	box-shadow: 0 0 10px var(--red);
+}
+
+.navbarmobile {
+	display: none;
 }
 
 .navbar ul {
@@ -94,14 +190,92 @@ a {
 }
 
 /**********************************/
-/* Menu
+/* Menu mobile
 /**********************************/
+@media (max-width: 900.9px) {
+	.header-c {
+		width: 100%;
+		padding: 0 8%;
+	}
+	.navbar {
+		display: none;
+	}
 
+	#toggle {
+		display: block;
+		z-index: 12;
+	}
+
+	.navbarmobile ul {
+		position: fixed;
+		width: 300px;
+		height: 100vh;
+		top: 80px;
+		right: 0;
+		background-color: var(--ligth-green);
+	}
+
+	.navbarmobile ul li{
+		padding: 10px 0px;
+		border-bottom: 2px solid var(--dark-green);
+		
+	}
+
+	.navbarmobile-list__link {
+		width: 100%;
+		padding: 10px 50px;
+	}
+
+	.open-menu {
+		display: block;
+	}
+}
 
 /**********************************/
 /* Quem somos
 /**********************************/
+.somos-c {
+	display: flex;
+	padding: 10px;
+	flex-wrap: wrap;
+	align-items: center;
+}
 
+.somos-text {
+	flex: 50%;
+}
+
+.somos-image {
+	flex: 50%;
+}
+
+@media (max-width: 900.9px) {
+
+	.title-p {
+		font-size: 2rem;
+	}
+
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.section {
+		width: 100%;
+	}
+
+	.somos-c {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.somos-text {
+		width: 70%;
+	}
+	
+	.somos-image {
+		flex: 40%;
+	}
+}
 /**********************************/
 /* Nossos cursos
 /**********************************/

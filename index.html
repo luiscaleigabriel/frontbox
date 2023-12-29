@@ -14,6 +14,7 @@
 </head>
 <body>
 
+	<!-- start header -->
 	<header class="header">
 		<div class="header-c">
 			<div class="logo">
@@ -22,7 +23,7 @@
 			<nav class="navbar">
 				<ul>
 					<li>
-						<a class="navbar-list__link" href="#">Quem Somos</a>
+						<a class="navbar-list__link" href="#somos">Quem Somos</a>
 					</li>
 					<li>
 						<a class="navbar-list__link" href="#">Nossos Cursos</a>
@@ -38,8 +39,67 @@
 					</li>
 				</ul>
 			</nav>
+			<button onclick="actionMenu()" id="toggle">
+				<span class="toggle_line"></span>
+				<span class="toggle_line"></span>
+				<span class="toggle_line"></span>
+			</button>
 		</div>
 	</header>
+	<!-- end header -->
+	<!-- start navbarmobile -->
+	<nav id="navbarmobile" class="navbarmobile">
+		<ul>
+			<li>
+				<a onclick="actionMenu()" class="navbarmobile-list__link" href="#somos">Quem Somos</a>
+			</li>
+			<li>
+				<a onclick="actionMenu()" class="navbarmobile-list__link" href="#">Nossos Cursos</a>
+			</li>
+			<li>
+				<a onclick="actionMenu()" class="navbarmobile-list__link" href="#">Planos</a>
+			</li>
+			<li>
+				<a onclick="actionMenu()" class="navbarmobile-list__link" href="#">Características</a>
+			</li>
+			<li>
+				<a onclick="actionMenu()" class="navbarmobile-list__link" href="#">Contacto</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- end navbarmobile -->
+	<h1 class="title-p">Aprenda a programar, <br /> um projecto de cada vez!</h1>
+	<hr />
+	<!-- start somos -->
+	<section id="somos" class="somos">
+		<h1 class="title">Quem somos</h1>
+		<div class="somos-c section">
+			<div class="somos-text">
+				<p>
+					Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu
+					levo!
+					Atirei o pau no gatis, per gatis num morreus. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Cevadis
+					im
+					ampola pa arma uma pindureta.
+				</p>
+				<br>
+				<p>
+					Copo furadis é disculpa de bebadis, arcu quam euismod magna. Praesent vel viverra nisi. Mauris aliquet nunc non
+					turpis
+					scelerisque, eget. Interagi no mé, cursus quis, vehicula ac nisi. Suco de cevadiss, é um leite divinis, qui tem
+					lupuliz,
+					matis, aguis e fermentis.
+				</p>
+
+			</div>
+			<div class="somos-image">
+				<img src="img/somos.png" alt="Quem somos" />
+			</div>
+		</div>
+	</section>
+	<!-- end somos -->
+	<!-- start c -->
+
 
 </body>
 </html>
