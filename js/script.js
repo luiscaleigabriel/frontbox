@@ -1,5 +1,4 @@
 
-
 function actionMenu() {
 
     const menuToggle = document.getElementById('toggle');
